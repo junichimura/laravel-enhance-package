@@ -2,10 +2,27 @@
 
 namespace Junichimura\LaravelEnhancePackage\Eloquent;
 
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Junichimura\LaravelEnhancePackage\Eloquent\Exceptions\InvalidArgumentException;
 
 trait EnhanceModelTrait
 {
+
+    /**
+     * 指定IDに対応するモデルの取得を試みるが、存在しない場合にはNotFoundHttpExceptionをthrowする。
+     *
+     * @param $id
+     * @param $throwMessage
+     * @param array $headers
+     *
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     */
+    public static function findOr404($id, $throwMessage, array $headers = [])
+    {
+        self::findOrAbort($id, null, $throwMessage, $headers);
+    }
+
     /**
      * @param $id
      * @param int $code
@@ -44,6 +61,7 @@ trait EnhanceModelTrait
     }
 
     /**
+     * モデルインスタンスにリクエストの内容をそのまま投入する。
      * @param Request $request
      * @return static
      */
@@ -66,7 +84,7 @@ trait EnhanceModelTrait
     public function setArrayValue(array $array)
     {
         if (array_values($array) === $array) {
-            throw new \RuntimeException("引数は連想配列にしてください。");
+            throw new InvalidArgumentException("引数は連想配列にする必要があります。");
         }
 
         foreach ($array as $key => $value) {
