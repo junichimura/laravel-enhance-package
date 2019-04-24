@@ -1,0 +1,20 @@
+{
+    "name": "fujijun/laravel-enhance-package",
+    "description": "sample description.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Junichi Fujimura",
+            "email": "jfujimura13@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "laravel/framework": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fujijun\\LaravelEnhancePackage\\": "src/"
+        }
+    }
+}
