@@ -1,5 +1,5 @@
 {
-    "name": "fujijun/laravel-enhance-package",
+    "name": "junichimura/laravel-enhance-package",
     "description": "sample description.",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Fujijun\\LaravelEnhancePackage\\": "src/"
+            "Junichimura\\LaravelEnhancePackage\\": "src/"
         }
     }
 }
