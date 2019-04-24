@@ -2,6 +2,8 @@
 
 namespace Junichimura\LaravelEnhancePackage\Eloquent;
 
+use Illuminate\Http\Response;
+
 trait EnhanceModelTrait
 {
     /**
