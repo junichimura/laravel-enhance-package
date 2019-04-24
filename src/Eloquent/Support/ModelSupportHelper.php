@@ -1,6 +1,6 @@
 <?php
 
-namespace Fujijun\LaravelEnhancePackage\Eloquent\Support;
+namespace Junichimura\LaravelEnhancePackage\Eloquent\Support;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Builder;

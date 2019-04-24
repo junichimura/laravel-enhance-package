@@ -1,6 +1,6 @@
 <?php
 
-namespace Fujijun\LaravelEnhancePackage\Eloquent;
+namespace Junichimura\LaravelEnhancePackage\Eloquent;
 
 trait EnhanceModelTrait
 {
