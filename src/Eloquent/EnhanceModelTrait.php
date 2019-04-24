@@ -2,7 +2,7 @@
 
 namespace Fujijun\LaravelEnhancePackage\Eloquent;
 
-class EnhanceModelTrait
+trait EnhanceModelTrait
 {
     /**
      * @param $id
